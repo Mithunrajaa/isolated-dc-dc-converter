@@ -57,20 +57,28 @@ voltage ripple.
 
 ## Simulation
 
+## Simulation
+
 The converter was modelled and simulated in MATLAB/Simulink.
 
-The simulation examined:
+The simulation was used to examine the switching behaviour, inductor currents,
+transformer currents, and input/output voltage characteristics.
 
-- MOSFET gate signals
-- Inductor currents
-- Primary and secondary currents
-- Capacitor and load currents
-- Inductor voltage
-- Input and output voltages
-- Steady-state converter behaviour
+### Simulink Model
 
-The documented simulation uses duty ratios of D1 = 0.50 and D2 = 0.25 at
-100 kHz. :contentReference[oaicite:2]{index=2}
+![Converter simulation model](simulation/converter_model.png)
+
+### Gate Signals
+
+![Gate signals](simulation/gate_signals.png)
+
+### Inductor Currents
+
+![Inductor currents](simulation/inductor_currents.png)
+
+### Primary and Secondary Currents
+
+![Primary and secondary currents](simulation/primary_secondary_currents.png)
 
 ## Hardware Implementation
 
@@ -93,13 +101,12 @@ and MOSFET thermal management. :contentReference[oaicite:3]{index=3}
 
 ## Results
 
-The thesis reports an approximately 80 V output from a 20 V input in the
-simulation, with an output-voltage ripple target of approximately 1.6 V
-(2% of 80 V). :contentReference[oaicite:4]{index=4}
+The simulation results were evaluated using the converter's key electrical
+waveforms.
 
-The hardware implementation used the same nominal 20 V input, 100 kHz
-switching frequency, 180 µH inductors, and 22 µF capacitor specified for
-the design. :contentReference[oaicite:5]{index=5}
+### Input and Output Voltage
+
+![Input and output voltage](results/input_output_voltage.png)
 
 ## Project Structure
 
