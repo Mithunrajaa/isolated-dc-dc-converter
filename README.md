@@ -66,19 +66,19 @@ transformer currents, and input/output voltage characteristics.
 
 ### Simulink Model
 
-![Converter simulation model](simulation/converter_model.png)
+![Converter simulation model](simulation/converter_model.jpg)
 
 ### Gate Signals
 
-![Gate signals](simulation/gate_signals.png)
+![Gate signals](simulation/gate_signals.jpg)
 
 ### Inductor Currents
 
-![Inductor currents](simulation/inductor_currents.png)
+![Inductor currents](simulation/inductor_currents.jpg)
 
 ### Primary and Secondary Currents
 
-![Primary and secondary currents](simulation/primary_secondary_currents.png)
+![Primary and secondary currents](simulation/primary_secondary_currents.jpg)
 
 ## Hardware Implementation
 
