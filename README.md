@@ -132,10 +132,6 @@ corresponding to 2% of the 80 V output voltage.
 | Inductor-current ripple target | 0.6 A |
 | Output-voltage ripple target | ≈1.6 V |
 
-> **Note:** The values above combine design specifications, ripple targets,
-> and simulation results. They should not be interpreted as experimental
-> hardware measurements unless explicitly identified as such.
-
 ## Experimental Results
 
 The hardware prototype was experimentally evaluated using an oscilloscope.
@@ -165,27 +161,8 @@ The measured switching frequency shown by the oscilloscope was approximately
 | Output voltage | 80 V nominal | 71.4 V mean |
 | Switching frequency | 100 kHz | 97.1 kHz |
 
-> **Note:** The experimental measurements shown here are taken directly from
-> the oscilloscope screenshots. The 20.0 V peak-to-peak value reported for the
-> output waveform is not treated as output ripple without further analysis of
-> the waveform and measurement conditions.
 
-```text
-isolated-dc-dc-converter/
-│
-├── README.md
-│
-├── docs/
-│   └── project-summary.pdf
-│
-├── simulation/
-│   ├── Main_circuit.slx
-│   └── figures/
-│
-├── hardware/
-│   ├── pcb/
-│   ├── photos/
-│   └── gerbers/
-│
+
+
 └── results/
     └── figures/
