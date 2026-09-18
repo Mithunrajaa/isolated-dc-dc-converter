@@ -82,22 +82,12 @@ transformer currents, and input/output voltage characteristics.
 
 ## Hardware Implementation
 
-A PCB prototype was designed and fabricated based on the proposed converter
-topology.
+The converter was implemented as a hardware prototype and experimentally
+evaluated.
 
-The hardware implementation included:
+### Hardware Setup
 
-- Power-stage PCB
-- MOSFET switches
-- High-frequency transformer
-- Two inductors
-- Output capacitor
-- Separate gate-driver circuitry
-- Variable resistive load
-- DC power supplies
-
-The hardware design also considered PCB routing, loop area, EMI, grounding,
-and MOSFET thermal management. :contentReference[oaicite:3]{index=3}
+![Hardware setup](hardware/photos/hardware_setup.jpg)
 
 ## Results
 
