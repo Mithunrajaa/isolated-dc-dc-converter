@@ -136,14 +136,41 @@ corresponding to 2% of the 80 V output voltage.
 > and simulation results. They should not be interpreted as experimental
 > hardware measurements unless explicitly identified as such.
 
-### Experimental Hardware
+## Experimental Results
 
-The hardware implementation was designed around the same nominal 20 V input,
-100 kHz switching frequency, 180 µH inductors, and 22 µF output capacitor.
+The hardware prototype was experimentally evaluated using an oscilloscope.
 
-The documented hardware design specifies an output target of approximately
-80 V and a 100 W load condition.
-```text
+### Measured Input Voltage
+
+![Measured input voltage](results/experimental_input_voltage.jpg)
+
+The measured input voltage was approximately **19.9 V**.
+
+### Measured Output Voltage
+
+![Measured output voltage](results/experimental_output_voltage.jpg)
+
+The measured mean output voltage was approximately **71.4 V**.
+The oscilloscope reported a peak-to-peak value of **20.0 V** for the displayed
+CH2 waveform.
+
+The measured switching frequency shown by the oscilloscope was approximately
+**97.1 kHz**, compared with the nominal design switching frequency of 100 kHz.
+
+### Simulation vs Experimental Observation
+
+| Parameter | Design / Simulation | Experimental |
+|---|---:|---:|
+| Input voltage | 20 V | 19.9 V |
+| Output voltage | 80 V nominal | 71.4 V mean |
+| Switching frequency | 100 kHz | 97.1 kHz |
+
+> **Note:** The experimental measurements shown here are taken directly from
+> the oscilloscope screenshots. The 20.0 V peak-to-peak value reported for the
+> output waveform is not treated as output ripple without further analysis of
+> the waveform and measurement conditions.
+
+
 isolated-dc-dc-converter/
 │
 ├── README.md
