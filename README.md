@@ -160,9 +160,3 @@ The measured switching frequency shown by the oscilloscope was approximately
 | Input voltage | 20 V | 19.9 V |
 | Output voltage | 80 V nominal | 71.4 V mean |
 | Switching frequency | 100 kHz | 97.1 kHz |
-
-
-
-
-└── results/
-    └── figures/
