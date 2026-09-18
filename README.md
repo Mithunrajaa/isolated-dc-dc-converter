@@ -12,7 +12,7 @@ The converter was designed for a 100 W output power and a switching frequency
 of 100 kHz. MATLAB/Simulink was used to model and simulate the converter,
 followed by PCB implementation and hardware testing.
 
-## Design Specifications
+## Key Design Parameters
 
 | Parameter | Value |
 |---|---:|
@@ -21,41 +21,54 @@ followed by PCB implementation and hardware testing.
 | Output power | 100 W |
 | Switching frequency | 100 kHz |
 | Transformer turns ratio | 1:4 |
-| Inductors | 180 µH each |
-| Output capacitor | 22 µF |
+| Inductor L1 | 180 µH |
+| Inductor L2 | 180 µH |
+| Output capacitor CH | 22 µF |
+| Switching devices | MOSFETs |
 
 ## Converter Topology
 
-The proposed converter uses three active MOSFET switches and two equal
-inductors.
+The proposed converter consists of three active MOSFET switches (S1, S2, S3),
+two equal inductors (L1, L2), a high-frequency transformer, and a high-voltage
+output capacitor.
 
-The inductors are charged in parallel during the energy-storage intervals
-and subsequently discharged in series during the energy-transfer interval.
-A high-frequency transformer provides galvanic isolation and voltage step-up.
+The converter uses a switched-inductor based energy-transfer approach. During
+the energy-storage interval, L1 and L2 are charged in parallel from the input
+source. During the energy-transfer interval, the stored energy is transferred
+through the transformer toward the high-voltage output.
 
-The converter operates through three main switching modes:
+The converter operates through three principal switching modes:
 
-1. Energy storage with the inductors connected to the input.
-2. Continued inductor charging while the output capacitor supplies the load.
-3. Energy transfer from the inductors to the high-voltage output.
+1. **Mode 1 — Energy storage:** S1, S2, and S3 are ON and the inductors
+   store energy from the input.
+2. **Mode 2 — Continued charging:** S1 and S2 remain ON while S3 is OFF.
+   The inductors continue storing energy while the output capacitor supplies
+   the load.
+3. **Mode 3 — Energy transfer:** The switches are OFF and the stored energy
+   in the inductors is transferred toward the output through the transformer.
 
-## Design and Analysis
+The switching strategy uses two duty-cycle parameters, D1 and D2. The
+documented operating point uses D1 = 0.50 and D2 = 0.25 at a switching
+frequency of 100 kHz.
 
-The project involved:
+### Converter Topology
 
-- Converter topology analysis
-- Inductor and capacitor sizing
-- Transformer turns-ratio selection
-- Semiconductor switch selection
-- Voltage-stress analysis
-- Current and voltage ripple analysis
-- Efficiency analysis
-- MATLAB/Simulink modelling
+![Proposed converter topology](simulation/converter_topology.jpg)
 
-The design targeted approximately 10% inductor-current ripple and 2% output
-voltage ripple.
+## Design Methodology
 
-## Simulation
+The design process followed the following sequence:
+
+1. Define the input, output, power, and switching-frequency requirements.
+2. Analyse the operating modes of the proposed topology.
+3. Determine the required transformer turns ratio.
+4. Calculate the required inductance based on the allowable current ripple.
+5. Determine the output capacitance from the allowable output-voltage ripple.
+6. Select appropriate switching devices and passive components.
+7. Develop the MATLAB/Simulink model.
+8. Evaluate the simulated electrical waveforms.
+9. Implement the converter hardware.
+10. Experimentally evaluate the prototype.
 
 ## Simulation
 
