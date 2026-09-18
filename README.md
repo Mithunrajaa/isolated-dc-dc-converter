@@ -170,7 +170,7 @@ The measured switching frequency shown by the oscilloscope was approximately
 > output waveform is not treated as output ripple without further analysis of
 > the waveform and measurement conditions.
 
-...text
+```text
 isolated-dc-dc-converter/
 │
 ├── README.md
