@@ -115,8 +115,34 @@ waveforms.
 
 ![Input and output voltage](results/input_output_voltage.jpg)
 
-## Project Structure
+The simulated converter produces an output voltage close to the 80 V design
+target from a 20 V input under the documented operating conditions.
 
+The project specifies an output-voltage ripple target of approximately 1.6 V,
+corresponding to 2% of the 80 V output voltage.
+
+### Simulation Results Summary
+
+| Parameter | Documented Result |
+|---|---:|
+| Input voltage | 20 V |
+| Output voltage | ≈80 V |
+| Output power | 100 W |
+| Switching frequency | 100 kHz |
+| Inductor-current ripple target | 0.6 A |
+| Output-voltage ripple target | ≈1.6 V |
+
+> **Note:** The values above combine design specifications, ripple targets,
+> and simulation results. They should not be interpreted as experimental
+> hardware measurements unless explicitly identified as such.
+
+### Experimental Hardware
+
+The hardware implementation was designed around the same nominal 20 V input,
+100 kHz switching frequency, 180 µH inductors, and 22 µF output capacitor.
+
+The documented hardware design specifies an output target of approximately
+80 V and a 100 W load condition.
 ```text
 isolated-dc-dc-converter/
 │
