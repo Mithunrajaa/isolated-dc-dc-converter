@@ -82,8 +82,12 @@ transformer currents, and input/output voltage characteristics.
 
 ## Hardware Implementation
 
-The converter was implemented as a hardware prototype and experimentally
-evaluated.
+A hardware prototype of the converter was developed and experimentally
+evaluated following the simulation and design stages.
+
+The hardware implementation included the power stage, high-frequency
+transformer, inductors, switching devices, gate-driver circuitry, and
+supporting measurement and power-supply equipment.
 
 ### Hardware Setup
 
