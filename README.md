@@ -106,7 +106,7 @@ waveforms.
 
 ### Input and Output Voltage
 
-![Input and output voltage](results/input_output_voltage.png)
+![Input and output voltage](results/input_output_voltage.jpg)
 
 ## Project Structure
 
@@ -119,7 +119,7 @@ isolated-dc-dc-converter/
 │   └── project-summary.pdf
 │
 ├── simulation/
-│   ├── cap_mainckt.slx
+│   ├── Main_circuit.slx
 │   └── figures/
 │
 ├── hardware/
